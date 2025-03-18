@@ -7,7 +7,7 @@ const Header = () => {
 
   useEffect(() => {
     const checkScreenSize = () => {
-      setIsMobile(window.innerWidth < 640); // sm = 640px no Tailwind
+      setIsMobile(window.innerWidth < 768); // sm = 640px no Tailwind
     };
 
     checkScreenSize();

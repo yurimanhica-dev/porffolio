@@ -4,15 +4,15 @@ import animation from "../assets/animation.json";
 import { Button } from "./ui/button";
 export default function Main() {
   return (
-    <main className=" flex justify-center h-[100vh] items-center">
+    <main className=" flex justify-center h-[100vh] items-center mt-10">
       <div
         // style={{ width: "50%" }}
-        className="text-primary items-center justify-center md:flex md:flex-row-reverse w-1/2 md:w-full space-y-2 "
+        className="text-primary items-center justify-center md:flex md:flex-row-reverse w-1/2 md:w-[85%] space-y-2 "
       >
         <Lottie animationData={animation} loop={true} className="click" />
         <div className="md:w-1/2">
           <div className="flex flex-col gap-1 items-center justify-center">
-            <div className="text-2xl font-bold flex items-baseline md:text-start md:mt-10">
+            <div className="text-2xl font-bold flex items-baseline md:text-start ">
               <h1 className="md:text-4xl ">Olá,</h1>
               <img
                 src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif"
