@@ -1,29 +1,43 @@
+import { ChevronRightIcon } from "lucide-react";
+
 export default function About() {
   return (
-    <div className="px-4 py-8 bg-secondary h-[95vh] flex flex-col justify-center">
-      <h1 className="text-3xl mb-2 font-bold text-primary">Sobre mim</h1>
-      <p className="text-primary">
-        Sou Licenciado em Administração de Sistemas de Redes Informáticas pela
-        ISDB, com mais de 3 anos de experiência em Engenharia de Software. Como
-        desenvolvedor fullstack, atuo na implementação e manutenção de sistemas
-        de Contabilidade, Patrimônio, Recursos Humanos, Crédito e Seguros,
-        garantindo sempre privacidade de dados e performance otimizada. Trabalho
-        com
-        <strong> C#, MS SQL Server e Crystal Reports Viewer</strong>, integrando
-        APIs e desenvolvendo soluções intuitivas para facilitar a experiência do
-        usuário. Minha abordagem prioriza organização, lógica de programação
-        eficiente e adaptação a novas tecnologias, colaborando remotamente com
-        equipes para entregar projetos dentro dos prazos e padrões exigidos.
-      </p>
-      <div className="flex items-center justify-center m-auto">
+    <section
+      id="sobre-mim"
+      className="px-12 py-8 bg-secondary h-fit min-h-[50vh] md:min-h-[50vh] flex flex-col justify-center xl:gap-40  items-center  md:gap-20 md:px-8 lg:px-20 md:flex-row lg:min-h-[60vh]"
+    >
+      <div className="md:w-[50%] xl:w-[30%] mt-6">
+        <h1 className="text-5xl font-bold text-white">Mais</h1>
+        <h3 className="text-3xl mb-6 font-bold text-primary">Sobre mim</h3>
+        <p className="text-primary line-clamp-6 lg:line-clamp-10 xl:line-clamp-12 mb-4">
+          Sou Licenciado em Administração de Sistemas de Redes Informáticas pela
+          ISDB, com mais de 3 anos de experiência em Engenharia de Software.
+          Como desenvolvedor fullstack, atuo na implementação e manutenção de
+          sistemas de Contabilidade, Patrimônio, Recursos Humanos, Crédito e
+          Seguros, garantindo sempre privacidade de dados e performance
+          otimizada. Trabalho com
+          <strong> C#, MS SQL Server e Crystal Reports Viewer</strong>,
+          integrando APIs e desenvolvendo soluções intuitivas para facilitar a
+          experiência do usuário. Minha abordagem prioriza organização, lógica
+          de programação eficiente e adaptação a novas tecnologias, colaborando
+          remotamente com equipes para entregar projetos dentro dos prazos e
+          padrões exigidos.
+        </p>
+        <a
+          href=""
+          className="text-primary underline flex items-center justify-start"
+        >
+          <span className="font-bold">Saiba mais</span>
+          <ChevronRightIcon />
+        </a>
+      </div>
+      <div className="flex items-center justify-center mt-12">
         <img
           src="/about.png"
           alt="profile"
-          width={300}
-          height={300}
-          className="rounded-4xl click"
+          className="rounded-4xl click w-70 md:w-85 xl:w-100"
         />
       </div>
-    </div>
+    </section>
   );
 }

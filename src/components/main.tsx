@@ -4,13 +4,16 @@ import animation from "../assets/animation.json";
 import { Button } from "./ui/button";
 export default function Main() {
   return (
-    <main className=" flex justify-center h-[100vh] items-center mt-10">
+    <section
+      id="main"
+      className=" flex justify-center h-[100vh] items-center mt-10 xl:mr-28"
+    >
       <div
         // style={{ width: "50%" }}
         className="text-primary items-center justify-center md:flex md:flex-row-reverse w-1/2 md:w-[85%] space-y-2 "
       >
         <Lottie animationData={animation} loop={true} className="click" />
-        <div className="md:w-1/2">
+        <div className="md:w-1/2 md:px-8 ">
           <div className="flex flex-col gap-1 items-center justify-center">
             <div className="text-2xl font-bold flex items-baseline md:text-start ">
               <h1 className="md:text-4xl ">Olá,</h1>
@@ -25,12 +28,12 @@ export default function Main() {
               Yuri Manhiça!
             </h2>
           </div>
-          <h4 className="pt-4 text-center text-md sm:mb-2 md:px-8 lg:px-16">
+          <h4 className="pt-4 text-center text-md sm:mb-2 lg:px-20">
             Programador, atuando como Engenheiro de Software pela{" "}
             <strong>MALESOFTWARE</strong>.
           </h4>
-          <div className="flex items-center flex-col gap-4 pt-2">
-            <Button className="m-4 flex justify-center" asChild>
+          <div className="flex items-center flex-col gap-2">
+            <Button className="m-2 flex justify-center" asChild>
               <a
                 href="https://dbmib2q8rj.ufs.sh/f/Lm6xK3J7O1CLEMlyzsbWBDrHNlkZ671oFJq2IfGUwCjyX83S"
                 target="_blank"
@@ -59,6 +62,6 @@ export default function Main() {
         </div>
         <div></div>
       </div>
-    </main>
+    </section>
   );
 }

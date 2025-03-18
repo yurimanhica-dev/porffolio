@@ -26,15 +26,11 @@ export default function HeaderMobile() {
 
   return (
     <div className="fixed top-0 right-0 left-0 z-50 bg-background border-none outline-none">
-      {/* Barra de progresso */}
-      <div
-        className="h-2 bg-teal-600 transition-all duration-200 ease-out-in "
-        style={{ width: `${scrollProgress}%` }}
-      />
-
       {/* Cabeçalho */}
       <div className="flex items-center shadow-primary shadow justify-between px-8 py-2 text-primary border-b-primary bg-background">
-        <h3 className="text-xl font-semibold">Portfólio</h3>
+        <a href="/" className="text-xl font-semibold">
+          Portfólio
+        </a>
         <div className="flex gap-4">
           <Sheet>
             <SheetTrigger>
@@ -53,6 +49,10 @@ export default function HeaderMobile() {
           </Sheet>
         </div>
       </div>
+      <div
+        className="h-2 bg-cyan-900 transition-all duration-200 ease-out-in "
+        style={{ width: `${scrollProgress}%` }}
+      />
     </div>
   );
 }

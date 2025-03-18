@@ -21,6 +21,10 @@ body {
   animation: slide 20s linear infinite;
 }
 
+html {
+  @apply min-w-[400px];
+}
+
 .click {
   @apply cursor-pointer transition-all duration-500 ease-in-out;
 }

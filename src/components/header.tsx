@@ -3,18 +3,23 @@ import HeaderDesktop from "./header-desktop";
 import HeaderMobile from "./header-mobile";
 
 const Header = () => {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(true); // Inicialmente null para evitar renderização prematura
 
   useEffect(() => {
     const checkScreenSize = () => {
-      setIsMobile(window.innerWidth < 768); // sm = 640px no Tailwind
+      setIsMobile(window.innerWidth < 768); // sm = 768px no Tailwind
     };
 
-    checkScreenSize();
+    checkScreenSize(); // Verifica o tamanho da tela imediatamente
     window.addEventListener("resize", checkScreenSize);
 
     return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
+
+  // Se isMobile ainda for null, não renderiza nada
+  if (isMobile === null) {
+    return null;
+  }
 
   return <header>{isMobile ? <HeaderMobile /> : <HeaderDesktop />}</header>;
 };
