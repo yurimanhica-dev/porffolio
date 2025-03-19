@@ -6,13 +6,17 @@ export default function Main() {
   return (
     <section
       id="main"
-      className=" flex justify-center h-[100vh] items-center mt-10 xl:mr-28"
+      className=" flex justify-center h-[100vh] items-center mt-10  bg-gradient-to-b to-white"
     >
       <div
         // style={{ width: "50%" }}
         className="text-primary items-center justify-center md:flex md:flex-row-reverse w-1/2 md:w-[85%] space-y-2 "
       >
-        <Lottie animationData={animation} loop={true} className="click" />
+        <Lottie
+          animationData={animation}
+          loop={true}
+          className="click xl:mr-28"
+        />
         <div className="md:w-1/2 md:px-8 ">
           <div className="flex flex-col gap-1 items-center justify-center">
             <div className="text-2xl font-bold flex items-baseline md:text-start ">

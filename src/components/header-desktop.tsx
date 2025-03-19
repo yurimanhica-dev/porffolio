@@ -47,7 +47,12 @@ export default function HeaderDesktop() {
 
             <li className="flex items-center gap-1 justify-center">
               <FaLaptopCode className="text-primary" />
-              <a href="/">Experiências Tech</a>
+              <a
+                href="#experiencia"
+                onClick={() => scrollToSection("experiencia")}
+              >
+                Experiências Tech
+              </a>
             </li>
             <li className="flex items-center gap-1 justify-center">
               <FaProjectDiagram className="text-primary" />
