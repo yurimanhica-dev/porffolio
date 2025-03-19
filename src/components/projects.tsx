@@ -2,11 +2,14 @@ import { BiLinkExternal } from "react-icons/bi";
 
 export default function Projects() {
   return (
-    <div className="flex flex-col gap-4 w-full h-fit bg-primary ">
-      <h1 className="text-4xl text-center text-white font-bold m-8">
+    <section
+      id="project"
+      className="flex flex-col gap-4 w-full h-fit bg-primary "
+    >
+      <h1 className="text-4xl text-center text-white font-bold m-8 mt-20">
         Projetos
       </h1>
-      <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-2 px-2 mb-8">
+      <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-4 mb-8">
         <div className="flex flex-col w-130 px-8 justify-center items-center gap-4 relative lg:-mt-4">
           <div className="space-y-4 bg-white rounded-2xl">
             <img
@@ -122,6 +125,6 @@ export default function Projects() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

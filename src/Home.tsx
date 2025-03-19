@@ -1,5 +1,6 @@
 import About from "./components/about";
 import Experiences from "./components/experience";
+import Footer from "./components/footer";
 import Header from "./components/header";
 import Main from "./components/main";
 import Projects from "./components/projects";
@@ -15,7 +16,7 @@ function Home() {
       <Projects />
       <About />
       {/* <Contact /> */}
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

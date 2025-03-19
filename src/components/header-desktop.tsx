@@ -56,7 +56,9 @@ export default function HeaderDesktop() {
             </li>
             <li className="flex items-center gap-1 justify-center">
               <FaProjectDiagram className="text-primary" />
-              <a href="/">Projetos</a>
+              <a href="#project" onClick={() => scrollToSection("#project")}>
+                Projetos
+              </a>
             </li>
             <li className="flex items-center gap-1 justify-center">
               <FaUser className="text-primary" />
