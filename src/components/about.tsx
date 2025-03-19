@@ -3,8 +3,8 @@ import { ChevronRightIcon } from "lucide-react";
 export default function About() {
   return (
     <section
-      id="sobre-mim"
-      className="px-12 py-8 bg-secondary h-fit min-h-[70vh]  flex flex-col justify-center xl:gap-48  items-center  md:gap-20 md:px-8 lg:px-20 md:flex-row  xl:min-h-[95vh]"
+      id="about"
+      className="px-12 py-8 bg-secondary h-fit min-h-[70vh]  flex flex-col justify-center xl:gap-48  items-center  md:gap-20 md:px-8 lg:px-20 md:flex-row  xl:min-h-[80vh]"
     >
       <div className="md:w-[50%] xl:w-[30%] mt-6">
         <h1 className="text-5xl font-bold text-white">Mais</h1>
@@ -31,7 +31,7 @@ export default function About() {
           <ChevronRightIcon />
         </a>
       </div>
-      <div className="flex items-center justify-center mt-12">
+      <div className="flex items-center justify-center mt-12 mb-10">
         <img
           src="/about.png"
           alt="profile"

@@ -1,4 +1,11 @@
 import { useEffect, useState } from "react";
+import {
+  FaAddressBook,
+  FaLaptopCode,
+  FaProjectDiagram,
+  FaUser,
+} from "react-icons/fa";
+import { HiHome } from "react-icons/hi";
 import { Button } from "./ui/button";
 import {
   Sheet,
@@ -10,6 +17,7 @@ import {
 
 export default function HeaderMobile() {
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,7 +31,13 @@ export default function HeaderMobile() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      setIsOpen(false);
+    }
+  };
   return (
     <div className="fixed top-0 right-0 left-0 z-50 bg-background border-none outline-none">
       {/* Cabeçalho */}
@@ -32,17 +46,66 @@ export default function HeaderMobile() {
           Portfólio
         </a>
         <div className="flex gap-4">
-          <Sheet>
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger>
               <Button variant={"ghost"} className="hover:bg-transparent">
                 <img src="/menu.png" alt="menu" width={16} height={16} />
               </Button>
             </SheetTrigger>
-            <SheetContent>
+            <SheetContent className="w-[90%]">
               <SheetHeader>
                 <SheetDescription>
-                  This action cannot be undone. This will permanently delete
-                  your account and remove your data from our servers.
+                  <div className="flex flex-col gap-4 items-center h-screen mt-10 text-white ">
+                    <Button
+                      className="w-full rounded-full "
+                      onClick={() => scrollToSection("main")}
+                    >
+                      <HiHome />
+                      <a href="#main" className="flex gap-2">
+                        Página Inicial
+                      </a>
+                    </Button>
+                    <Button
+                      className="w-full rounded-full"
+                      onClick={() => scrollToSection("experiencia")}
+                    >
+                      <FaLaptopCode />
+                      <a href="#experiencia" className="flex gap-2">
+                        Experiências | Tech
+                      </a>
+                    </Button>
+                    <Button
+                      className="w-full rounded-full"
+                      onClick={() => scrollToSection("project")}
+                    >
+                      <FaProjectDiagram />
+                      <a
+                        href="#project"
+                        className="flex gap-2"
+                        onClick={() => scrollToSection("sobre-mim")}
+                      >
+                        Projetos
+                      </a>
+                    </Button>
+                    <Button
+                      className="w-full rounded-full"
+                      onClick={() => scrollToSection("about")}
+                    >
+                      <FaUser />
+                      <a href="about" className="flex gap-2">
+                        Sobre Me
+                      </a>
+                    </Button>
+                    <Button
+                      className="w-full rounded-full cursor-pointer"
+                      onClick={() => scrollToSection("about")}
+                    >
+                      <FaAddressBook />
+                      <a href="#about" className="flex gap-2">
+                        Contatos
+                      </a>
+                    </Button>
+                  </div>
                 </SheetDescription>
               </SheetHeader>
             </SheetContent>

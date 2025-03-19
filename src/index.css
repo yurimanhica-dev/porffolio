@@ -19,6 +19,20 @@ body {
   animation: slide 5s linear infinite;
 }
 
+@keyframes bounce-custom {
+  0%,
+  100% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+.bounce-custom {
+  animation: bounce-custom 2s infinite;
+}
+
 html {
   @apply min-w-[400px];
 }

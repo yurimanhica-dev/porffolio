@@ -1,8 +1,20 @@
 import { ArrowUp, Github, LinkedinIcon } from "lucide-react";
+import { useEffect, useState } from "react";
 import { DiReact } from "react-icons/di";
 
 export default function Footer() {
-  // Função para voltar ao topo suavemente
+  const [showButton, setShowButton] = useState(false);
+
+  // Monitora a rolagem da página para exibir/ocultar o botão
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowButton(window.scrollY > 300);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Função para rolar suavemente ao topo
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -36,14 +48,16 @@ export default function Footer() {
         </a>
       </div>
 
-      {/* Botão Back to Top */}
-      <button
-        onClick={scrollToTop}
-        className="fixed bottom-5 cursor-pointer right-5 bg-secondary animate-bounce ease-in-out  hover:bg-primary text-white p-3 rounded-full shadow-lg transition duration-500"
-        aria-label="Voltar ao topo"
-      >
-        <ArrowUp size={20} />
-      </button>
+      {/* Botão "Back to Top" */}
+      {showButton && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-5 animate-bounce right-5 bg-secondary hover:bg-primary text-white p-3 rounded-full shadow-lg transition-all duration-300 ease-in-out"
+          aria-label="Voltar ao topo"
+        >
+          <ArrowUp size={20} />
+        </button>
+      )}
     </footer>
   );
 }

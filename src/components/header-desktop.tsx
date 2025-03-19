@@ -62,7 +62,7 @@ export default function HeaderDesktop() {
             </li>
             <li className="flex items-center gap-1 justify-center">
               <FaUser className="text-primary" />
-              <a href="#sobre-mim" onClick={() => scrollToSection("sobre-mim")}>
+              <a href="#about" onClick={() => scrollToSection("about")}>
                 Sobre Me
               </a>
             </li>
