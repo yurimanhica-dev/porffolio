@@ -2,6 +2,7 @@ import About from "./components/about";
 import Experiences from "./components/experience";
 import Header from "./components/header";
 import Main from "./components/main";
+import Projects from "./components/projects";
 import Techs from "./components/techs";
 
 function Home() {
@@ -11,7 +12,7 @@ function Home() {
       <Main />
       <Experiences />
       <Techs />
-      {/* <Projects /> */}
+      <Projects />
       <About />
       {/* <Contact /> */}
       {/* <Footer /> */}

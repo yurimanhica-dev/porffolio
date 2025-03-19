@@ -11,7 +11,9 @@ export default function Experiences() {
             <img src="logoMS.ico" alt="" className=" h-40" />
           </div>
           <div>
-            <h2 className="text-lg font-bold">Engenheiro de Software.</h2>
+            <h2 className="text-lg font-bold uppercase text-secondary">
+              Eng. de Software.
+            </h2>
             <div className="flex w-full justify-between  md:flex-col md:mb-2">
               <div className="flex flex-col sm:flex-row sm:items-center gap-1 md:flex-col md:items-start">
                 <p className="font-bold text-md ">MALESOFTWARE</p>
@@ -25,18 +27,20 @@ export default function Experiences() {
               </p>
             </div>
             <p className="text-sm mb-2 -mt-0.5">Tempo Integral.</p>
-            <p className="text-sm md:line-clamp-14 xl:line-clamp-none">
-              Responsável pela implementação Fullstack e manutenção de sistemas
-              de Contabilidade, Recursos Humanos, Crédito e Seguros, para
-              entidades desde Micro-finanças a Micro Bancos, utilizando
-              frameworks ASP .NET em C# (Desktop) e Visual Basic (WEB), MS SQL
-              Server como Base de Dados e Crystal Reports Viewer para
-              visualização de relatórios. Destaco minha responsabilidade em dar
-              assistência aos estagiários mostrando as práticas do
-              desenvolvimento da MALESOFTWARE, integrando nossas aplicações com
-              entidades como TabluTech e QI PAGA, escalando os nossos serviços
-              através de APIs (Soap e REST).
-            </p>
+            <div className="overflow-y-hidden">
+              <p className="text-sm md:line-clamp-14 xl:line-clamp-none">
+                Responsável pela implementação Fullstack e manutenção de
+                sistemas de Contabilidade, Recursos Humanos, Crédito e Seguros,
+                para entidades desde Micro-finanças a Micro Bancos, utilizando
+                frameworks ASP .NET em C# (Desktop) e Visual Basic (WEB), MS SQL
+                Server como Base de Dados e Crystal Reports Viewer para
+                visualização de relatórios. Destaco minha responsabilidade em
+                dar assistência aos estagiários mostrando as práticas do
+                desenvolvimento da MALESOFTWARE, integrando nossas aplicações
+                com entidades como TabluTech e QI PAGA, escalando os nossos
+                serviços através de APIs (Soap e REST).
+              </p>
+            </div>
           </div>
         </div>
         <div>
@@ -44,7 +48,9 @@ export default function Experiences() {
             <img src="IPE.png" alt="" className=" h-40" />
           </div>
           <div>
-            <h2 className="text-lg font-bold">Formador de TIC's.</h2>
+            <h2 className="text-lg font-bold uppercase text-secondary">
+              Formador de TIC's.
+            </h2>
             <div className="flex w-full justify-between  md:flex-col md:mb-2">
               <div className="flex flex-col sm:flex-row sm:items-center gap-1 md:flex-col md:items-start">
                 <p className="font-bold text-md ">IPET</p>
@@ -77,7 +83,9 @@ export default function Experiences() {
             <img src="ISDB.png" alt="" className=" h-40" />
           </div>
           <div>
-            <h2 className="text-lg uppercase font-bold">Licenciatura.</h2>
+            <h2 className="text-lg uppercase font-bold text-secondary">
+              Licenciatura.
+            </h2>
             <div className="flex w-full justify-between  md:flex-col md:mb-2">
               <div className="flex flex-col sm:flex-row sm:items-center gap-1 md:flex-col md:items-start">
                 <p className="font-bold text-md ">ISDB</p>
@@ -87,11 +95,11 @@ export default function Experiences() {
                 </p>
               </div>
               <p className="text-sm text-secondary md:text-xs">
-                Fev 2019 - Dez 2023
+                Fev 2019 - Dez 2023.
               </p>
             </div>
             <p className="text-sm mb-2 -mt-0.5">Tempo Integral.</p>
-            <p className="text-sm md:line-clamp-14 xl:line-clamp-none mb-14">
+            <p className="text-sm md:line-clamp-14 xl:line-clamp-none mb-8 lg:mb-0">
               Adquiri experiência em Redes de Computadores com GNS3 configurando
               switches e roteadores para projetos de laboratórios e protocolos
               de roteamento em todas as camadas tendo um conhecimento solido

@@ -8,17 +8,15 @@ body {
   0% {
     transform: translateX(0%);
   }
-  50% {
-    transform: translateX(-10%);
-  }
   100% {
-    transform: translateX(10%);
+    transform: translateX(-6%);
   }
 }
 
 .animate-slide-infinite {
   display: flex;
-  animation: slide 20s linear infinite;
+  white-space: nowrap;
+  animation: slide 5s linear infinite;
 }
 
 html {

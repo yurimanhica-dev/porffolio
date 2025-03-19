@@ -51,7 +51,7 @@ export default function HeaderDesktop() {
                 href="#experiencia"
                 onClick={() => scrollToSection("experiencia")}
               >
-                Experiências Tech
+                Experiências | Tech
               </a>
             </li>
             <li className="flex items-center gap-1 justify-center">
